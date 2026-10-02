@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Using the NSR research resource</title><style>body{max-width:900px;margin:40px auto;padding:0 24px;font:17px/1.7 system-ui;color:#172f40}a{color:#086b60}code{background:#edf3f5;padding:2px 4px}</style></head><body><h1 id="using-this-research-resource">Using this research resource</h1>
+<p>Read <a href="../index.html">the static research page</a> or the repository README for query-first explanations of Task-Relevant Null-Space Residuals (NSR). The <a href="https://arxiv.org/abs/2609.37272">paper</a> is the source for the method and experimental claims.</p>
+<p>This public repository contains the research README, its standalone HTML version, and supporting analysis documents. The HTML uses static HTML5 and inline CSS, with no JavaScript, Jekyll, npm, or application runtime. A <code>.nojekyll</code> file tells GitHub Pages to serve the files directly.</p>
+<h2 id="inspecting-the-research-connections">Inspecting the research connections</h2>
+<ul>
+<li><a href="../paper_analysis.json">Paper analysis</a> records the extracted mechanism and experimental evidence.</li>
+<li><a href="../operator_taxonomy.json">Operator taxonomy</a> describes information-losing operations and applicability conditions.</li>
+<li><a href="../semantic_bridge.md">Semantic bridges</a> explains the connections from user problems to the method.</li>
+<li><a href="../coverage_report.md">Coverage audit</a> records structural coverage of the research explanations.</li>
+</ul>
+<p>Graph aggregation and Vision Transformer token merging are evaluated settings. Other operations are candidate applications subject to the conditions explained in the README. Providing pre-mapping distinctions is different from reconstructing arbitrary input from output alone.</p>
+<h2 id="how-these-materials-were-produced">How these materials were produced</h2>
+<p>The author used a separate Mostsearch workspace to read and verify the full paper, extract evidence, construct a fixed query suite, and assemble a query-first README. Current-session cloud Codex reviewers read the complete README and assessed each query with concrete mechanism bridges and quotations. The workspace preserved successive review snapshots and checked their references before summarizing results.</p>
+<p>That evaluation assesses potential relevance when a model has already received the README. It does not measure public search indexing, ranking, recommendation, or adoption. The public research page does not execute a model or perform search experiments. Source-workspace tools and raw experiment records are maintained separately.</p>
+<h2 id="publishing-the-static-page">Publishing the static page</h2>
+<p>GitHub Pages serves this repository from the root of the <code>main</code> branch. <code>index.html</code> contains the research text; <code>sitemap.xml</code> lists the page URL. Updating static files and pushing to <code>main</code> updates the site. No build system is required in this repository.</p>
+</body></html>

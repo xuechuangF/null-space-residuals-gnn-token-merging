@@ -1,0 +1,1396 @@
+{
+  "arxiv_id": "2609.37272",
+  "schema_version": "1.0",
+  "operator_count": 30,
+  "scope_note": "Operator aliases broaden retrieval. Validated instances and analyst-proposed candidates are distinguished; source links support the general mechanism, not experiments on candidates.",
+  "operators": [
+    {
+      "id": "graph_aggregation",
+      "operator": "graph aggregation",
+      "aliases": [
+        "graph aggregation",
+        "GNN aggregation",
+        "graph neural network aggregation",
+        "neighborhood aggregation",
+        "message aggregation",
+        "message passing"
+      ],
+      "problem_descriptions": [
+        "graph aggregation hurts model accuracy",
+        "how to improve graph aggregation performance",
+        "graph aggregation loses fine-grained information",
+        "preserve task-relevant details during graph aggregation",
+        "recover information hidden by graph aggregation",
+        "different inputs become indistinguishable after graph aggregation",
+        "add a residual pathway to graph aggregation"
+      ],
+      "structural_bridge": [
+        "graph aggregation",
+        "A=t^T uses the backbone's realized local aggregation coefficients; pre-aggregation member message variations in ker(A) disappear from the aggregate.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "validated",
+      "applicability_condition": "GCN, mean GraphSAGE and GIN in the evaluated graph tasks",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS4",
+          "anchor": "S3.SS4",
+          "label": "S3.SS4"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S4.T2",
+          "anchor": "S4.T2",
+          "label": "S4.T2"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S4.T3",
+          "anchor": "S4.T3",
+          "label": "S4.T3"
+        }
+      ],
+      "claim_type": "paper_evaluation",
+      "not_an_experimental_claim": false
+    },
+    {
+      "id": "token_merging",
+      "operator": "token merging",
+      "aliases": [
+        "token merging",
+        "token compression",
+        "token reduction",
+        "token fusion",
+        "merge tokens",
+        "compressed ViT",
+        "ToMe",
+        "PiToMe",
+        "MPM"
+      ],
+      "problem_descriptions": [
+        "token merging hurts model accuracy",
+        "how to improve token merging performance",
+        "token merging loses fine-grained information",
+        "preserve task-relevant details during token merging",
+        "recover information hidden by token merging",
+        "different inputs become indistinguishable after token merging",
+        "add a residual pathway to token merging"
+      ],
+      "structural_bridge": [
+        "token merging",
+        "Fix merge groups and weights, form their weighted mean, and retain member deviations through learned feature and spatial branches.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "validated",
+      "applicability_condition": "DeiT-Tiny/16 semantic segmentation with ToMe, PiToMe and MPM",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS5",
+          "anchor": "S3.SS5",
+          "label": "S3.SS5"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S4.T1",
+          "anchor": "S4.T1",
+          "label": "S4.T1"
+        }
+      ],
+      "claim_type": "paper_evaluation",
+      "not_an_experimental_claim": false
+    },
+    {
+      "id": "mean_aggregation",
+      "operator": "mean aggregation",
+      "aliases": [
+        "mean aggregation",
+        "mean pooling",
+        "average aggregation",
+        "neighborhood mean",
+        "weighted mean"
+      ],
+      "problem_descriptions": [
+        "mean aggregation hurts model accuracy",
+        "how to improve mean aggregation performance",
+        "mean aggregation loses fine-grained information",
+        "preserve task-relevant details during mean aggregation",
+        "recover information hidden by mean aggregation",
+        "different inputs become indistinguishable after mean aggregation",
+        "add a residual pathway to mean aggregation"
+      ],
+      "structural_bridge": [
+        "mean aggregation",
+        "A normalized averaging row discards zero-sum member differences, so residual member processing can expose information beyond their mean.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "validated_instance_and_candidate_extensions",
+      "applicability_condition": "Mean GraphSAGE is evaluated; arbitrary average pooling modules are candidates",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS4",
+          "anchor": "S3.SS4",
+          "label": "S3.SS4"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS5",
+          "anchor": "S3.SS5",
+          "label": "S3.SS5"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "sum_aggregation",
+      "operator": "sum aggregation",
+      "aliases": [
+        "sum aggregation",
+        "sum pooling",
+        "weighted sum aggregation",
+        "additive aggregation",
+        "set sum"
+      ],
+      "problem_descriptions": [
+        "sum aggregation hurts model accuracy",
+        "how to improve sum aggregation performance",
+        "sum aggregation loses fine-grained information",
+        "preserve task-relevant details during sum aggregation",
+        "recover information hidden by sum aggregation",
+        "different inputs become indistinguishable after sum aggregation",
+        "add a residual pathway to sum aggregation"
+      ],
+      "structural_bridge": [
+        "sum aggregation",
+        "A sum row or coefficient-weighted row has a member null space whenever multiple independent members are combined into one aggregate.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "validated_instance_and_candidate_extensions",
+      "applicability_condition": "GIN neighbor/root aggregation is evaluated; other set sums need their own integration",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS4",
+          "anchor": "S3.SS4",
+          "label": "S3.SS4"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#A1.T6",
+          "anchor": "A1.T6",
+          "label": "A1.T6"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "weighted_aggregation",
+      "operator": "weighted aggregation",
+      "aliases": [
+        "weighted aggregation",
+        "weighted pooling",
+        "weighted feature aggregation",
+        "weighted feature sum",
+        "weighted token pooling"
+      ],
+      "problem_descriptions": [
+        "weighted aggregation hurts model accuracy",
+        "how to improve weighted aggregation performance",
+        "weighted aggregation loses fine-grained information",
+        "preserve task-relevant details during weighted aggregation",
+        "recover information hidden by weighted aggregation",
+        "different inputs become indistinguishable after weighted aggregation",
+        "add a residual pathway to weighted aggregation"
+      ],
+      "structural_bridge": [
+        "weighted aggregation",
+        "Use the realized coefficient matrix, including input-dependent coefficients when conditioned on the forward pass; rank deficiency gives operator-invisible variations.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "validated_instance_and_candidate_extensions",
+      "applicability_condition": "GCN coefficients and token merge weights are evaluated; other weighted maps are candidates",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS1",
+          "anchor": "S3.SS1",
+          "label": "S3.SS1"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS4",
+          "anchor": "S3.SS4",
+          "label": "S3.SS4"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS5",
+          "anchor": "S3.SS5",
+          "label": "S3.SS5"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "pooling",
+      "operator": "pooling",
+      "aliases": [
+        "pooling",
+        "neural pooling",
+        "feature pooling",
+        "average pooling",
+        "global pooling",
+        "local pooling"
+      ],
+      "problem_descriptions": [
+        "pooling hurts model accuracy",
+        "how to improve pooling performance",
+        "pooling loses fine-grained information",
+        "preserve task-relevant details during pooling",
+        "recover information hidden by pooling",
+        "different inputs become indistinguishable after pooling",
+        "add a residual pathway to pooling"
+      ],
+      "structural_bridge": [
+        "pooling",
+        "Linear averaging/summing pooling over several members is many-to-one and removes member-level detail.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate",
+      "applicability_condition": "Pooling must hide useful distinctions and provide accessible pre-pooling members; standalone pooling NSR not evaluated",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS1",
+          "anchor": "S3.SS1",
+          "label": "S3.SS1"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS2",
+          "anchor": "S3.SS2",
+          "label": "S3.SS2"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "max_pooling",
+      "operator": "max pooling",
+      "aliases": [
+        "max pooling",
+        "maxpool",
+        "max pooling information loss",
+        "nonlinear pooling",
+        "winner take all pooling"
+      ],
+      "problem_descriptions": [
+        "max pooling hurts model accuracy",
+        "how to improve max pooling performance",
+        "max pooling loses fine-grained information",
+        "preserve task-relevant details during max pooling",
+        "recover information hidden by max pooling",
+        "different inputs become indistinguishable after max pooling",
+        "add a residual pathway to max pooling"
+      ],
+      "structural_bridge": [
+        "max pooling",
+        "With selection fixed, a max-pooling region is a selector linear map; unselected features are invisible to that realization.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate_conditional",
+      "applicability_condition": "Requires adapting residual extraction/routing to realized winners; no global fixed-null-space theorem for nonlinear max pooling",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS1",
+          "anchor": "S3.SS1",
+          "label": "S3.SS1"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS2",
+          "anchor": "S3.SS2",
+          "label": "S3.SS2"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "graph_pooling",
+      "operator": "graph pooling",
+      "aliases": [
+        "graph pooling",
+        "graph readout",
+        "graph level pooling",
+        "node pooling",
+        "graph representation compression"
+      ],
+      "problem_descriptions": [
+        "graph pooling hurts model accuracy",
+        "how to improve graph pooling performance",
+        "graph pooling loses fine-grained information",
+        "preserve task-relevant details during graph pooling",
+        "recover information hidden by graph pooling",
+        "different inputs become indistinguishable after graph pooling",
+        "add a residual pathway to graph pooling"
+      ],
+      "structural_bridge": [
+        "graph pooling",
+        "A weighted graph readout or group assignment combines node representations into fewer outputs, potentially losing node distinctions.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate",
+      "applicability_condition": "Construct current assignment/readout A and provide task-specific node-to-graph residual integration; graph readout itself not separately evaluated",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS2",
+          "anchor": "S3.SS2",
+          "label": "S3.SS2"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS4",
+          "anchor": "S3.SS4",
+          "label": "S3.SS4"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "graph_coarsening",
+      "operator": "graph coarsening",
+      "aliases": [
+        "graph coarsening",
+        "graph reduction",
+        "hierarchical graph compression",
+        "cluster graph pooling",
+        "supernode aggregation"
+      ],
+      "problem_descriptions": [
+        "graph coarsening hurts model accuracy",
+        "how to improve graph coarsening performance",
+        "graph coarsening loses fine-grained information",
+        "preserve task-relevant details during graph coarsening",
+        "recover information hidden by graph coarsening",
+        "different inputs become indistinguishable after graph coarsening",
+        "add a residual pathway to graph coarsening"
+      ],
+      "structural_bridge": [
+        "graph coarsening",
+        "A cluster assignment/aggregation matrix maps multiple nodes to coarse nodes and can have a nontrivial member null space.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate",
+      "applicability_condition": "Coarsening must expose node memberships/weights and useful fine-node residuals; coarse topology adaptation is additional design work",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS1",
+          "anchor": "S3.SS1",
+          "label": "S3.SS1"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS2",
+          "anchor": "S3.SS2",
+          "label": "S3.SS2"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "cluster_aggregation",
+      "operator": "cluster aggregation",
+      "aliases": [
+        "cluster aggregation",
+        "cluster pooling",
+        "cluster compression",
+        "centroid pooling",
+        "group feature aggregation"
+      ],
+      "problem_descriptions": [
+        "cluster aggregation hurts model accuracy",
+        "how to improve cluster aggregation performance",
+        "cluster aggregation loses fine-grained information",
+        "preserve task-relevant details during cluster aggregation",
+        "recover information hidden by cluster aggregation",
+        "different inputs become indistinguishable after cluster aggregation",
+        "add a residual pathway to cluster aggregation"
+      ],
+      "structural_bridge": [
+        "cluster aggregation",
+        "Centroids or weighted group representatives erase within-cluster deviations; fixed assignments yield Y=AX.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate",
+      "applicability_condition": "Task-supervised member residual integration with current clusters and weights; generic cluster use not evaluated",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS2",
+          "anchor": "S3.SS2",
+          "label": "S3.SS2"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS5",
+          "anchor": "S3.SS5",
+          "label": "S3.SS5"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "feature_aggregation",
+      "operator": "feature aggregation",
+      "aliases": [
+        "feature aggregation",
+        "representation aggregation",
+        "multi feature aggregation",
+        "hidden feature aggregation",
+        "feature combining"
+      ],
+      "problem_descriptions": [
+        "feature aggregation hurts model accuracy",
+        "how to improve feature aggregation performance",
+        "feature aggregation loses fine-grained information",
+        "preserve task-relevant details during feature aggregation",
+        "recover information hidden by feature aggregation",
+        "different inputs become indistinguishable after feature aggregation",
+        "add a residual pathway to feature aggregation"
+      ],
+      "structural_bridge": [
+        "feature aggregation",
+        "When features are combined by weighted sums over members, the aggregate cannot retain every independent input distinction.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate",
+      "applicability_condition": "Identify a linear realized aggregation and residual space; aggregation need not be task-harmful merely because it is many-to-one",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS1",
+          "anchor": "S3.SS1",
+          "label": "S3.SS1"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS2",
+          "anchor": "S3.SS2",
+          "label": "S3.SS2"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "feature_compression",
+      "operator": "feature compression",
+      "aliases": [
+        "feature compression",
+        "representation compression",
+        "hidden state compression",
+        "compressed features",
+        "latent compression"
+      ],
+      "problem_descriptions": [
+        "feature compression hurts model accuracy",
+        "how to improve feature compression performance",
+        "feature compression loses fine-grained information",
+        "preserve task-relevant details during feature compression",
+        "recover information hidden by feature compression",
+        "different inputs become indistinguishable after feature compression",
+        "add a residual pathway to feature compression"
+      ],
+      "structural_bridge": [
+        "feature compression",
+        "A linear dimensional bottleneck or member compression map may remove a task-relevant null-space component.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate",
+      "applicability_condition": "Form a compatible operator and lift, retain pre-compression inputs, and adapt encoded residual integration",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS2",
+          "anchor": "S3.SS2",
+          "label": "S3.SS2"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS3",
+          "anchor": "S3.SS3",
+          "label": "S3.SS3"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "feature_fusion",
+      "operator": "feature fusion",
+      "aliases": [
+        "feature fusion",
+        "representation fusion",
+        "weighted feature fusion",
+        "feature mixing",
+        "multi branch fusion",
+        "sensor fusion"
+      ],
+      "problem_descriptions": [
+        "feature fusion hurts model accuracy",
+        "how to improve feature fusion performance",
+        "feature fusion loses fine-grained information",
+        "preserve task-relevant details during feature fusion",
+        "recover information hidden by feature fusion",
+        "different inputs become indistinguishable after feature fusion",
+        "add a residual pathway to feature fusion"
+      ],
+      "structural_bridge": [
+        "feature fusion",
+        "Weighted-sum or dimension-reducing fusion can map distinct branch/sensor combinations to the same fused feature.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate",
+      "applicability_condition": "Candidate only for fusion with a lossy realized map; concatenation by itself need not be non-injective",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS1",
+          "anchor": "S3.SS1",
+          "label": "S3.SS1"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS2",
+          "anchor": "S3.SS2",
+          "label": "S3.SS2"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "multimodal_fusion",
+      "operator": "multimodal fusion",
+      "aliases": [
+        "multimodal fusion",
+        "vision language fusion",
+        "multisensor fusion",
+        "audio visual fusion",
+        "cross modal compression"
+      ],
+      "problem_descriptions": [
+        "multimodal fusion hurts model accuracy",
+        "how to improve multimodal fusion performance",
+        "multimodal fusion loses fine-grained information",
+        "preserve task-relevant details during multimodal fusion",
+        "recover information hidden by multimodal fusion",
+        "different inputs become indistinguishable after multimodal fusion",
+        "add a residual pathway to multimodal fusion"
+      ],
+      "structural_bridge": [
+        "multimodal fusion",
+        "A fused low-dimensional or weighted aggregate may obscure modality-specific distinctions useful to downstream tasks.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate",
+      "applicability_condition": "Need an identifiable realized map, modality alignment and task-specific integration; no multimodal experiments in this paper",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS1",
+          "anchor": "S3.SS1",
+          "label": "S3.SS1"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS2",
+          "anchor": "S3.SS2",
+          "label": "S3.SS2"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS3",
+          "anchor": "S3.SS3",
+          "label": "S3.SS3"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "downsampling",
+      "operator": "neural downsampling",
+      "aliases": [
+        "neural downsampling",
+        "spatial downsampling",
+        "feature map reduction",
+        "patch downsampling",
+        "image feature reduction"
+      ],
+      "problem_descriptions": [
+        "neural downsampling hurts model accuracy",
+        "how to improve neural downsampling performance",
+        "neural downsampling loses fine-grained information",
+        "preserve task-relevant details during neural downsampling",
+        "recover information hidden by neural downsampling",
+        "different inputs become indistinguishable after neural downsampling",
+        "add a residual pathway to neural downsampling"
+      ],
+      "structural_bridge": [
+        "neural downsampling",
+        "A linear or forward-conditioned downsampling operator can erase fine-position differences, creating a residual source at the original positions.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate",
+      "applicability_condition": "Use current mapping and position correspondence, include any affine term consistently, and learn a task-specific spatial integration",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S2",
+          "anchor": "S2",
+          "label": "S2"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS2",
+          "anchor": "S3.SS2",
+          "label": "S3.SS2"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS5",
+          "anchor": "S3.SS5",
+          "label": "S3.SS5"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "patch_merging",
+      "operator": "patch merging",
+      "aliases": [
+        "patch merging",
+        "hierarchical transformer patch merging",
+        "patch compression",
+        "window aggregation",
+        "spatial token merging"
+      ],
+      "problem_descriptions": [
+        "patch merging hurts model accuracy",
+        "how to improve patch merging performance",
+        "patch merging loses fine-grained information",
+        "preserve task-relevant details during patch merging",
+        "recover information hidden by patch merging",
+        "different inputs become indistinguishable after patch merging",
+        "add a residual pathway to patch merging"
+      ],
+      "structural_bridge": [
+        "patch merging",
+        "Grouping neighboring patches and projecting/averaging them can be non-injective, unlike pure lossless concatenation.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate",
+      "applicability_condition": "Only lossy merging/projecting steps; adapt to channels and member axes of the actual module",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS2",
+          "anchor": "S3.SS2",
+          "label": "S3.SS2"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS5",
+          "anchor": "S3.SS5",
+          "label": "S3.SS5"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "token_pruning",
+      "operator": "token pruning",
+      "aliases": [
+        "token pruning",
+        "token dropping",
+        "token selection",
+        "prune tokens",
+        "discarded tokens",
+        "token sparsification"
+      ],
+      "problem_descriptions": [
+        "token pruning hurts model accuracy",
+        "how to improve token pruning performance",
+        "token pruning loses fine-grained information",
+        "preserve task-relevant details during token pruning",
+        "recover information hidden by token pruning",
+        "different inputs become indistinguishable after token pruning",
+        "add a residual pathway to token pruning"
+      ],
+      "structural_bridge": [
+        "token pruning",
+        "With selected positions fixed, a selector matrix omits discarded-token components, which lie in its null space.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate",
+      "applicability_condition": "Retain removed token features before dropping; preserve original selection while adapting learned residual routing and budget",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS1",
+          "anchor": "S3.SS1",
+          "label": "S3.SS1"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS2",
+          "anchor": "S3.SS2",
+          "label": "S3.SS2"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS3",
+          "anchor": "S3.SS3",
+          "label": "S3.SS3"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "attention_pooling",
+      "operator": "attention pooling",
+      "aliases": [
+        "attention pooling",
+        "attention weighted aggregation",
+        "learned query pooling",
+        "latent query compression",
+        "attention readout"
+      ],
+      "problem_descriptions": [
+        "attention pooling hurts model accuracy",
+        "how to improve attention pooling performance",
+        "attention pooling loses fine-grained information",
+        "preserve task-relevant details during attention pooling",
+        "recover information hidden by attention pooling",
+        "different inputs become indistinguishable after attention pooling",
+        "add a residual pathway to attention pooling"
+      ],
+      "structural_bridge": [
+        "attention pooling",
+        "With current attention weights fixed, fewer pooled query outputs than input members imply a rank-deficient value aggregation matrix.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate",
+      "applicability_condition": "Residual analysis applies to the fixed-weight value aggregation; selection/query/key computation remains input-dependent",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS1",
+          "anchor": "S3.SS1",
+          "label": "S3.SS1"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS2",
+          "anchor": "S3.SS2",
+          "label": "S3.SS2"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "cross_attention_compression",
+      "operator": "cross attention compression",
+      "aliases": [
+        "cross attention compression",
+        "latent bottleneck attention",
+        "perceiver style compression",
+        "resampler compression",
+        "query based compression"
+      ],
+      "problem_descriptions": [
+        "cross attention compression hurts model accuracy",
+        "how to improve cross attention compression performance",
+        "cross attention compression loses fine-grained information",
+        "preserve task-relevant details during cross attention compression",
+        "recover information hidden by cross attention compression",
+        "different inputs become indistinguishable after cross attention compression",
+        "add a residual pathway to cross attention compression"
+      ],
+      "structural_bridge": [
+        "cross attention compression",
+        "A small latent-query set aggregates a larger value-token set via a rectangular attention matrix, which can hide value-member distinctions.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate",
+      "applicability_condition": "Need accessible value inputs and attention weights; adapt residual routing to queries or source positions under downstream supervision",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS1",
+          "anchor": "S3.SS1",
+          "label": "S3.SS1"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS2",
+          "anchor": "S3.SS2",
+          "label": "S3.SS2"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS3",
+          "anchor": "S3.SS3",
+          "label": "S3.SS3"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "self_attention",
+      "operator": "self attention aggregation",
+      "aliases": [
+        "self attention aggregation",
+        "attention information loss",
+        "weighted value aggregation",
+        "attention representation collapse",
+        "rank deficient attention"
+      ],
+      "problem_descriptions": [
+        "self attention aggregation hurts model accuracy",
+        "how to improve self attention aggregation performance",
+        "self attention aggregation loses fine-grained information",
+        "preserve task-relevant details during self attention aggregation",
+        "recover information hidden by self attention aggregation",
+        "different inputs become indistinguishable after self attention aggregation",
+        "add a residual pathway to self attention aggregation"
+      ],
+      "structural_bridge": [
+        "self attention aggregation",
+        "For fixed attention weights, value aggregation is linear and may have a null space if rank deficient; square attention is not necessarily rank deficient.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate_conditional",
+      "applicability_condition": "Confirm rank/indistinguishability of the realized value map; NSR does not imply every attention layer loses information",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS1",
+          "anchor": "S3.SS1",
+          "label": "S3.SS1"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS2",
+          "anchor": "S3.SS2",
+          "label": "S3.SS2"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "graph_attention",
+      "operator": "graph attention aggregation",
+      "aliases": [
+        "graph attention aggregation",
+        "GAT aggregation",
+        "attention GNN",
+        "weighted message passing",
+        "graph attention pooling"
+      ],
+      "problem_descriptions": [
+        "graph attention aggregation hurts model accuracy",
+        "how to improve graph attention aggregation performance",
+        "graph attention aggregation loses fine-grained information",
+        "preserve task-relevant details during graph attention aggregation",
+        "recover information hidden by graph attention aggregation",
+        "different inputs become indistinguishable after graph attention aggregation",
+        "add a residual pathway to graph attention aggregation"
+      ],
+      "structural_bridge": [
+        "graph attention aggregation",
+        "Fix the current neighbor attention weights; a local weighted aggregation row can hide member differences as in graph NSR.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate",
+      "applicability_condition": "Use realized attention coefficients and preserve their computation rules; graph attention networks were not evaluated",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS1",
+          "anchor": "S3.SS1",
+          "label": "S3.SS1"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS4",
+          "anchor": "S3.SS4",
+          "label": "S3.SS4"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "set_aggregation",
+      "operator": "set aggregation",
+      "aliases": [
+        "set aggregation",
+        "Deep Sets aggregation",
+        "multiset representation",
+        "permutation invariant pooling",
+        "set encoder pooling"
+      ],
+      "problem_descriptions": [
+        "set aggregation hurts model accuracy",
+        "how to improve set aggregation performance",
+        "set aggregation loses fine-grained information",
+        "preserve task-relevant details during set aggregation",
+        "recover information hidden by set aggregation",
+        "different inputs become indistinguishable after set aggregation",
+        "add a residual pathway to set aggregation"
+      ],
+      "structural_bridge": [
+        "set aggregation",
+        "Sum/mean member aggregation may create collisions between sets whose distinctions remain task-relevant.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate",
+      "applicability_condition": "Account for any element-wise embedding before defining A; use member processing compatible with permutation symmetry",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S2",
+          "anchor": "S2",
+          "label": "S2"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS2",
+          "anchor": "S3.SS2",
+          "label": "S3.SS2"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS3",
+          "anchor": "S3.SS3",
+          "label": "S3.SS3"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "point_cloud_aggregation",
+      "operator": "point cloud aggregation",
+      "aliases": [
+        "point cloud aggregation",
+        "point feature pooling",
+        "point cloud compression",
+        "point grouping",
+        "3D feature aggregation"
+      ],
+      "problem_descriptions": [
+        "point cloud aggregation hurts model accuracy",
+        "how to improve point cloud aggregation performance",
+        "point cloud aggregation loses fine-grained information",
+        "preserve task-relevant details during point cloud aggregation",
+        "recover information hidden by point cloud aggregation",
+        "different inputs become indistinguishable after point cloud aggregation",
+        "add a residual pathway to point cloud aggregation"
+      ],
+      "structural_bridge": [
+        "point cloud aggregation",
+        "Local groups of point features reduced to one representative can erase member geometry/feature distinctions.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate",
+      "applicability_condition": "Requires explicit local map or forward-conditioned selection, point correspondence and supervised residual integration; not evaluated",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS1",
+          "anchor": "S3.SS1",
+          "label": "S3.SS1"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS2",
+          "anchor": "S3.SS2",
+          "label": "S3.SS2"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "temporal_aggregation",
+      "operator": "temporal aggregation",
+      "aliases": [
+        "temporal aggregation",
+        "frame pooling",
+        "video token compression",
+        "sequence pooling",
+        "time series aggregation"
+      ],
+      "problem_descriptions": [
+        "temporal aggregation hurts model accuracy",
+        "how to improve temporal aggregation performance",
+        "temporal aggregation loses fine-grained information",
+        "preserve task-relevant details during temporal aggregation",
+        "recover information hidden by temporal aggregation",
+        "different inputs become indistinguishable after temporal aggregation",
+        "add a residual pathway to temporal aggregation"
+      ],
+      "structural_bridge": [
+        "temporal aggregation",
+        "Weighted pooling or merging across frames/time steps can discard short events and temporal member distinctions.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate",
+      "applicability_condition": "Need temporal member inputs and mapping/position correspondence; nonlinear recurrence as a whole is outside fixed linear theorem",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS1",
+          "anchor": "S3.SS1",
+          "label": "S3.SS1"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS2",
+          "anchor": "S3.SS2",
+          "label": "S3.SS2"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS5",
+          "anchor": "S3.SS5",
+          "label": "S3.SS5"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "audio_compression",
+      "operator": "audio feature compression",
+      "aliases": [
+        "audio feature compression",
+        "speech token merging",
+        "audio token reduction",
+        "temporal feature downsampling",
+        "speech representation pooling"
+      ],
+      "problem_descriptions": [
+        "audio feature compression hurts model accuracy",
+        "how to improve audio feature compression performance",
+        "audio feature compression loses fine-grained information",
+        "preserve task-relevant details during audio feature compression",
+        "recover information hidden by audio feature compression",
+        "different inputs become indistinguishable after audio feature compression",
+        "add a residual pathway to audio feature compression"
+      ],
+      "structural_bridge": [
+        "audio feature compression",
+        "Merging/downsampling audio features may remove local differences required for phonetic or event prediction.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate",
+      "applicability_condition": "Construct realized compression map and learn audio/task-specific residual path; paper does not evaluate audio",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS1",
+          "anchor": "S3.SS1",
+          "label": "S3.SS1"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS2",
+          "anchor": "S3.SS2",
+          "label": "S3.SS2"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS3",
+          "anchor": "S3.SS3",
+          "label": "S3.SS3"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "rank_deficient_projection",
+      "operator": "rank deficient projection",
+      "aliases": [
+        "rank deficient projection",
+        "low rank projection",
+        "dimensionality reduction",
+        "linear bottleneck",
+        "rank deficient layer"
+      ],
+      "problem_descriptions": [
+        "rank deficient projection hurts model accuracy",
+        "how to improve rank deficient projection performance",
+        "rank deficient projection loses fine-grained information",
+        "preserve task-relevant details during rank deficient projection",
+        "recover information hidden by rank deficient projection",
+        "different inputs become indistinguishable after rank deficient projection",
+        "add a residual pathway to rank deficient projection"
+      ],
+      "structural_bridge": [
+        "rank deficient projection",
+        "For a rank-deficient linear feature transformation, ker(A) explicitly identifies invisible feature directions.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate",
+      "applicability_condition": "May require applying the abstraction on the feature rather than member axis; recoverable complement must be retained pre-projection",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.E1",
+          "anchor": "S3.E1",
+          "label": "S3.E1"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.E2",
+          "anchor": "S3.E2",
+          "label": "S3.E2"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.E3",
+          "anchor": "S3.E3",
+          "label": "S3.E3"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "strided_convolution",
+      "operator": "strided convolution",
+      "aliases": [
+        "strided convolution",
+        "CNN downsampling",
+        "convolutional bottleneck",
+        "strided feature reduction",
+        "channel reduction convolution"
+      ],
+      "problem_descriptions": [
+        "strided convolution hurts model accuracy",
+        "how to improve strided convolution performance",
+        "strided convolution loses fine-grained information",
+        "preserve task-relevant details during strided convolution",
+        "recover information hidden by strided convolution",
+        "different inputs become indistinguishable after strided convolution",
+        "add a residual pathway to strided convolution"
+      ],
+      "structural_bridge": [
+        "strided convolution",
+        "A realized linear convolution/downsampling over a flattened feature tensor can be non-injective and admit complementary residual directions.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate_conditional",
+      "applicability_condition": "Test actual shape/rank and handle bias as an affine offset; efficient residual extraction is new work, not evaluated",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS1",
+          "anchor": "S3.SS1",
+          "label": "S3.SS1"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS2",
+          "anchor": "S3.SS2",
+          "label": "S3.SS2"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "multi_scale_fusion",
+      "operator": "multi scale fusion",
+      "aliases": [
+        "multi scale fusion",
+        "pyramid feature fusion",
+        "resolution fusion",
+        "feature pyramid aggregation",
+        "multi resolution compression"
+      ],
+      "problem_descriptions": [
+        "multi scale fusion hurts model accuracy",
+        "how to improve multi scale fusion performance",
+        "multi scale fusion loses fine-grained information",
+        "preserve task-relevant details during multi scale fusion",
+        "recover information hidden by multi scale fusion",
+        "different inputs become indistinguishable after multi scale fusion",
+        "add a residual pathway to multi scale fusion"
+      ],
+      "structural_bridge": [
+        "multi scale fusion",
+        "Resampling plus weighted-sum fusion may hide fine-resolution or branch-specific distinctions.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate",
+      "applicability_condition": "Analyze the actual linear resampling/fusion realization and route retained details to useful target positions",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS1",
+          "anchor": "S3.SS1",
+          "label": "S3.SS1"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS2",
+          "anchor": "S3.SS2",
+          "label": "S3.SS2"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS5",
+          "anchor": "S3.SS5",
+          "label": "S3.SS5"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "expert_fusion",
+      "operator": "expert output aggregation",
+      "aliases": [
+        "expert output aggregation",
+        "mixture of experts fusion",
+        "expert weighted sum",
+        "ensemble feature fusion",
+        "expert representation compression"
+      ],
+      "problem_descriptions": [
+        "expert output aggregation hurts model accuracy",
+        "how to improve expert output aggregation performance",
+        "expert output aggregation loses fine-grained information",
+        "preserve task-relevant details during expert output aggregation",
+        "recover information hidden by expert output aggregation",
+        "different inputs become indistinguishable after expert output aggregation",
+        "add a residual pathway to expert output aggregation"
+      ],
+      "structural_bridge": [
+        "expert output aggregation",
+        "With routing/gating coefficients fixed, combining multiple expert features into one weighted output may discard expert-specific differences.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate",
+      "applicability_condition": "Relevance requires a non-injective feature aggregation with accessible expert outputs; additional NSR gate differs from changing original expert routing",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS1",
+          "anchor": "S3.SS1",
+          "label": "S3.SS1"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS2",
+          "anchor": "S3.SS2",
+          "label": "S3.SS2"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS3",
+          "anchor": "S3.SS3",
+          "label": "S3.SS3"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    },
+    {
+      "id": "many_to_one",
+      "operator": "many-to-one neural operation",
+      "aliases": [
+        "many-to-one neural operation",
+        "non injective neural mapping",
+        "lossy neural operator",
+        "representation collision",
+        "different inputs same representation"
+      ],
+      "problem_descriptions": [
+        "many-to-one neural operation hurts model accuracy",
+        "how to improve many-to-one neural operation performance",
+        "many-to-one neural operation loses fine-grained information",
+        "preserve task-relevant details during many-to-one neural operation",
+        "recover information hidden by many-to-one neural operation",
+        "different inputs become indistinguishable after many-to-one neural operation",
+        "add a residual pathway to many-to-one neural operation"
+      ],
+      "structural_bridge": [
+        "many-to-one neural operation",
+        "A non-injective realized linear transformation induces equivalence classes; null-space residuals expose distinctions invisible within each class.",
+        "operator-invisible task-relevant distinctions",
+        "extract current-operator null-space residuals from pre-mapping inputs",
+        "member processing and task-supervised integration via NSR"
+      ],
+      "mathematical_bridge": "Y=AX; AUA=A; Z=(I-UA)X; AZ=0; X=UY+Z; learn member-dependent codes and integration",
+      "evidence_status": "candidate_structural_class",
+      "applicability_condition": "Find task-relevant collisions and identify a realized linear map before using the exact null-space formulas",
+      "source_anchors": [
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS1",
+          "anchor": "S3.SS1",
+          "label": "S3.SS1"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.37272v1#S3.SS2",
+          "anchor": "S3.SS2",
+          "label": "S3.SS2"
+        }
+      ],
+      "claim_type": "mechanistic_inference_with_explicit_conditions",
+      "not_an_experimental_claim": true
+    }
+  ]
+}
